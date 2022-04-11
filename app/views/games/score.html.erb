@@ -1,0 +1,39 @@
+<h1>SCORE Page</h1>
+
+<%# <%= @score %>
+<%# <% if @included %> %>
+  <%# <% if @english_word %> %>
+    <%# <p>You Win!</p> %>
+  <%# <% else %> %>
+    <%# <p> You Lose</p> %>
+  <%# <% end %> %>
+  <%# <% else %> %>
+  <%# <p> You Lose</p> %>
+<%# <% end %> %>
+
+
+<% if @included %>
+  <% if @english_word %>
+    <p><strong>Congratulations!</strong> <%= @word %> is a valid English word!</p>
+  <% else %>
+    <p>Sorry but <strong><%= @word %></strong> does not seem to be a valid English word...</p>
+  <% end %>
+<% else %>
+  <p>Sorry but <strong><%= @word %></strong> can't be built out of <%= @letters.join(", ") %></p>
+<% end %>
+
+
+
+
+
+
+
+<%= link_to "Play Again", root_path %>
+
+
+<%# The word can’t be built out of the original grid %>
+<%# The word is valid according to the grid, but is not a valid English word %>
+<%# The word is valid according to the grid and is an English word %>
+
+<%# Check if the word includes the letters given %>
+<%# check if the word is valid %>
